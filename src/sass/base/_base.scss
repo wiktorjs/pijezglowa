@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+
+  // ? Define
+  color: $color-secondary-dark;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+
+    @include respond(big-desk) {
+      font-size: 100%;
+    }
+
+    @include respond(tab-land) {
+      font-size: 56.25%;
+    }
+    
+    @include respond(tab-port) {
+      font-size: 50%;
+    }
+
+    @include respond(tab-port) {
+      font-size: 40%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 1.6rem;
+
+    // ? Define
+    font-family: 'Montserrat', sans-serif;
+    line-height: normal;
+
+    padding: 3rem;
+    
+}

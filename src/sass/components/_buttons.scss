@@ -1,0 +1,21 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        font-size: inherit;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        font-weight: 500;
+
+        border-radius: 5px;
+        border: 1px solid currentColor;
+
+        padding: 1rem;
+        
+        background-color: $color-primary-light;
+        color: $color-secondary-dark;
+        box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.15);
+        
+    }
+}
