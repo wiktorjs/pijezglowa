@@ -22,24 +22,21 @@
   </head>
 
   <body>
-  
+    <nav class="nav">
+      <p class="nav__logo">PzG</p>
+      <!-- prettier-ignore -->
+      <ul class="nav__list">
+        <li class="nav__list--item"><a class="nav__list--link" href="#">Statystyki</a></li>
+        <li class="nav__list--item"><a class="nav__list--link" href="#">Nasz cel</a></li>
+        <li class="nav__list--item"><a class="nav__list--link" href="#">Dlaczego?</a></li>
+        <li class="nav__list--item"><a class="nav__list--link" href="#">Kontakt</a></li>
+      </ul>
+    </nav>
 
     <header class="header">
-      <nav class="nav">
-        <p class="nav__logo">PzG</p>
-        <!-- prettier-ignore -->
-        <ul class="nav__list">
-          <li class="nav__list--item"><a class="nav__list--link" href="#">Statystyki</a></li>
-          <li class="nav__list--item"><a class="nav__list--link" href="#">Nasz cel</a></li>
-          <li class="nav__list--item"><a class="nav__list--link" href="#">Dlaczego?</a></li>
-          <li class="nav__list--item"><a class="nav__list--link" href="#">Kontakt</a></li>
-        </ul>
-      </nav>
-      <!-- <img src="./img/header-background.jpg" alt=""> -->
       <div class="header__title">
-        
         <svg class="header__title--svg-image">
-          <use href="./img/images.svg#header-image"></use>
+          <use href="./img/header-image.svg#header-image"></use>
         </svg>
 
         <div class="header__title--text-box">
@@ -49,15 +46,57 @@
             Kampania mająca na celu poszerzanie świadomości młodzieży o
             negatywnych skutkach nadmiernego picia alkoholu.
           </p>
-          <a class="btn header__btn" href="#">Zainteresowany?
-            <svg class="header__btn--icon"><use href="./img/icons.svg#icon-arrow-down"></use></svg>
+          <a class="btn header__btn" href="#about"
+            >Zaczynajmy!
+            <svg class="header__btn--icon">
+              <use href="./img/icons.svg#icon-arrow-down"></use>
+            </svg>
           </a>
-
         </div>
       </div>
-
-      
     </header>
+
+    <main>
+      <section id="about" class="section section-about">
+        <div class="content-box">
+          <div class="content-box__text-box"></div>
+
+          <svg class="content-box__image">
+            <use href="./img/stats-image.svg#stats-image"></use>
+          </svg>
+        </div>
+      </section>
+
+      <section class="section section-goals">
+        <div class="content-box">
+          <svg class="content-box__image">
+            <use href="./img/goals-image.svg#goals-image"></use>
+          </svg>
+
+          <div class="content-box__text-box"></div>
+        </div>
+      </section>
+
+      <section class="section section-why">
+        <div class="content-box">
+          <div class="content-box__text-box"></div>
+
+          <svg class="content-box__image">
+            <use href="./img//why-image.svg#why-image"></use>
+          </svg>
+        </div>
+      </section>
+
+      <section class="section section-contact">
+        <div class="content-box">
+          <svg class="content-box__image">
+            <use href="./img/contact-image.svg#contact-image"></use>
+          </svg>
+
+          <div class="content-box__text-box"></div>
+        </div>
+      </section>
+    </main>
 
     <!-- <footer>
       <span class="attribution">

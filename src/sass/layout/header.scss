@@ -1,6 +1,7 @@
 .header {
   position: relative;
-
+  margin-top: -8rem;
+  
   height: 90vh;
   min-height: 60rem;
   background-color: $color-secondary;
@@ -11,7 +12,8 @@
     ),
     url(../img/header-background.jpg);
   background-size: cover;
-  background-position-y: 30%;
+  background-position-y: center;
+  border-bottom: 1px solid $color-secondary-dark;
 
   &__title {
     position: absolute;
@@ -23,10 +25,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 7rem;
-    
+
 
     &--text-box {
+      margin-right: 5rem;
       flex: 0 0 40%;
       display: flex;
       flex-wrap: wrap;
@@ -87,8 +89,10 @@
 
 
     &--svg-image {
-      height: 80%;
-      flex: 0 0 40%;
+      align-self: flex-end;
+     
+      flex: 1;
+      overflow: visible;
     }
   }
 }

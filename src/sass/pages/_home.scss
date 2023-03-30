@@ -1,3 +1,45 @@
+// | === COMMON SECTION STYLING ===
+.section {
+  height: 60rem;
+  padding: 5rem;
+
+  display: flex;
+  place-content: center;
+  place-items: center;
+
+  &-about {
+    background-color: $color-about;
+  }
+
+  &-goals {
+    background-color: $color-goals;
+  }
+
+  &-why {
+    background-color: $color-why;
+  }
+
+  &-contact {
+    background-color: $color-contact;
+  }
+}
+
+.content-box {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  &__image {
+    padding: 5rem;
+    flex: 0 0 50%;
+  }
+
+  &__text-box {
+    flex: 1;
+  }
+}
+
+
 // | === ATTRIBUTION ===
 .attribution {
     position: absolute;
