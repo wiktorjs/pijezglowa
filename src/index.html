@@ -22,22 +22,30 @@
   </head>
 
   <body>
+    <div class="nav-menu__button">
+      <span class="nav-menu__button--top"></span>
+      <span class="nav-menu__button--mid"></span>
+      <span class="nav-menu__button--bottom"></span>
+    </div>
+
     <nav class="nav">
       <p class="nav__logo">PzG</p>
       <!-- prettier-ignore -->
       <ul class="nav__list">
-        <li class="nav__list--item"><a class="nav__list--link" href="#">Statystyki</a></li>
-        <li class="nav__list--item"><a class="nav__list--link" href="#">Nasz cel</a></li>
-        <li class="nav__list--item"><a class="nav__list--link" href="#">Dlaczego?</a></li>
-        <li class="nav__list--item"><a class="nav__list--link" href="#">Kontakt</a></li>
+        <li class="nav__list--item"><a class="nav__list--link about" href="#about">Statystyki</a></li>
+        <li class="nav__list--item"><a class="nav__list--link goals" href="#goals">Nasz cel</a></li>
+        <li class="nav__list--item"><a class="nav__list--link why" href="#why">Dlaczego?</a></li>
+        <li class="nav__list--item"><a class="nav__list--link contact" href="#contact">Kontakt</a></li>
       </ul>
     </nav>
 
     <header class="header">
       <div class="header__title">
-        <svg class="header__title--svg-image">
-          <use href="./img/header-image.svg#header-image"></use>
-        </svg>
+
+      <div class="header__title--svg-image">
+
+      </div>
+        
 
         <div class="header__title--text-box">
           <p class="header__text">Piję z głową czyli:</p>
@@ -59,7 +67,11 @@
     <main>
       <section id="about" class="section section-about">
         <div class="content-box">
-          <div class="content-box__text-box"></div>
+          <div class="content-box__text-box">
+            <h2>Statystyki</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis assumenda autem ipsa distinctio sint earum eveniet aliquam quam maiores iste. Temporibus dicta nobis voluptatum dolorum quibusdam alias voluptas ipsum optio!</p>
+          </div>
 
           <svg class="content-box__image">
             <use href="./img/stats-image.svg#stats-image"></use>
@@ -67,33 +79,47 @@
         </div>
       </section>
 
-      <section class="section section-goals">
+      <section id="goals" class="section section-goals">
         <div class="content-box">
           <svg class="content-box__image">
             <use href="./img/goals-image.svg#goals-image"></use>
           </svg>
 
-          <div class="content-box__text-box"></div>
+          <div class="content-box__text-box">
+            <h2>Nasza misja</h2>
+            <hr>
+            <p>Naszym celem jest uświadomienie młodego pokolenia o tym że nie warto pić alkoholu w nadmiernych ilościach.  Uwagę pragniemy szczególnie skupić na konsekwencjach związanych ze zdrowiem oraz innych problemach, jakie mogą z tego wynikać.</p>
+          </div>
         </div>
       </section>
 
-      <section class="section section-why">
-        <div class="content-box">
-          <div class="content-box__text-box"></div>
+      <section id="why" class="section section-why">
+        <div id="why-content-box" class="content-box">
+          <div class="content-box__text-box">
+            <h2>Dlaczego?</h2>
+            <hr>
+            <p>W związku z rosnącym odsetkiem spożycia alkoholu przez osoby w młodym wieku postanowiliśmy stworzyć kampanię społeczną dotyczącą bezpiecznego spożywania napojów imprezowych. Nazwa kampanii ma na celu przyciągnięcie uwagi i dotarcie do jak największej liczby odbiorców w wieku 18-25 lat.</p>
+          </div>
 
           <svg class="content-box__image">
-            <use href="./img//why-image.svg#why-image"></use>
+            <use href="./img/why-image.svg#why-image"></use>
           </svg>
+         
         </div>
       </section>
 
-      <section class="section section-contact">
+      <section id="contact" class="section section-contact">
         <div class="content-box">
           <svg class="content-box__image">
             <use href="./img/contact-image.svg#contact-image"></use>
           </svg>
 
-          <div class="content-box__text-box"></div>
+          <div class="content-box__text-box">
+            <h2>Kontakt</h2>
+            <hr>
+            <p>Zobacz nasze kanały społecznościowe, aby być z nami na bieżąco:</p>
+
+          </div>
         </div>
       </section>
     </main>

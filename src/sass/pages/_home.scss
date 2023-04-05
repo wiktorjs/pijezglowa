@@ -1,63 +1,87 @@
 // | === COMMON SECTION STYLING ===
 .section {
-  height: 60rem;
+  height: calc(100vh - 8rem);
   padding: 5rem;
 
-  display: flex;
-  place-content: center;
-  place-items: center;
+  @include sectionColorPallete("about", $color-about, $color-about-dark);
+  @include sectionColorPallete("goals", $color-goals, $color-goals-dark);
+  @include sectionColorPallete("why", $color-why, $color-why-dark);
+  @include sectionColorPallete("contact", $color-contact, $color-contact-dark);
 
-  &-about {
-    background-color: $color-about;
+  & p {
+    color: $color-secondary-dark;
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    font-weight: 500;
   }
 
-  &-goals {
-    background-color: $color-goals;
+  hr {
+    height: 3px;
+    border: none;
+    margin: auto;
+    width: 15rem;
   }
-
-  &-why {
-    background-color: $color-why;
-  }
-
-  &-contact {
-    background-color: $color-contact;
-  }
+  
 }
 
 .content-box {
   height: 100%;
   width: 100%;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+
   &__image {
-    padding: 5rem;
-    flex: 0 0 50%;
+    padding: 3rem;
+    height: 100%;
+    width: 100%;
+
+    @include respond(phone) {
+      grid-area: 1 / 1;
+      opacity: 0.2;
+    }
   }
 
   &__text-box {
-    flex: 1;
+    position: relative;
+    margin-top: 5%;
+    padding: 0 5rem;
+    text-align: justify;
+    z-index: 2;
+
+  
+
+    @include respond(phone) {
+      margin-top: 0;
+      align-self: center;
+      grid-area: 1 / 1;
+    }
   }
 }
 
-
 // | === ATTRIBUTION ===
 .attribution {
-    position: absolute;
-    bottom: 0;
-  
-    padding: 2rem;
-    color: $color-primary-dark;
-    opacity: 0.8;
-    font-size: 1rem;
-  
-    & > a {
-      &,
-      &:link,
-      &:visited {
-        text-decoration: none;
-        z-index: 5;
-        color: inherit;
-        opacity: inherit;
-      }
+  position: absolute;
+  bottom: 0;
+
+  padding: 2rem;
+  color: $color-primary-dark;
+  opacity: 0.8;
+  font-size: 1rem;
+
+  & > a {
+    &,
+    &:link,
+    &:visited {
+      text-decoration: none;
+      z-index: 5;
+      color: inherit;
+      opacity: inherit;
     }
   }
+}
