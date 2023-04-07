@@ -30,7 +30,7 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-items: center;
+  place-items: center;
 
   @include respond(phone) {
     grid-template-columns: 1fr;
@@ -38,8 +38,9 @@
 
   &__image {
     padding: 3rem;
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 80%;
+    display: flex;
 
     @include respond(phone) {
       grid-area: 1 / 1;
