@@ -45,7 +45,7 @@
       </ul>
     </nav>
 
-    <header class="header">
+    <header id="header" class="header">
       <div class="header__title">
         <div class="header__title--svg-image">
           <object data="./img/header-image-ANIMATED.svg" type="image/svg+xml">
@@ -74,9 +74,12 @@
       <section id="about" class="section section-about" data-value="an">
         <div class="content-box">
           <div class="content-box__text-box">
-            <h2>Statystyki</h2>
-            <hr />
-            <p>
+            <div class="section-title">
+              <h2>Statystyki</h2>
+              <hr />
+            </div>
+
+            <p class="section-text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Perspiciatis assumenda autem ipsa distinctio sint earum eveniet
               aliquam quam maiores iste. Temporibus dicta nobis voluptatum
@@ -109,9 +112,11 @@
           </div>
 
           <div class="content-box__text-box">
-            <h2>Nasz cel</h2>
-            <hr />
-            <p>
+            <div class="section-title">
+              <h2>Nasz cel</h2>
+              <hr />
+            </div>
+            <p class="section-text">
               Naszym celem jest uświadomienie młodego pokolenia o tym że nie
               warto pić alkoholu w nadmiernych ilościach. Uwagę pragniemy
               szczególnie skupić na konsekwencjach związanych ze zdrowiem oraz
@@ -124,9 +129,11 @@
       <section id="why" class="section section-why">
         <div id="why-content-box" class="content-box">
           <div class="content-box__text-box">
-            <h2>Dlaczego?</h2>
-            <hr />
-            <p>
+            <div class="section-title">
+              <h2>Dlaczego?</h2>
+              <hr />
+            </div>
+            <p class="section-text">
               W związku z rosnącym odsetkiem spożycia alkoholu przez osoby w
               młodym wieku postanowiliśmy stworzyć kampanię społeczną dotyczącą
               bezpiecznego spożywania napojów imprezowych. Nazwa kampanii ma na
@@ -135,22 +142,35 @@
             </p>
           </div>
 
-          <svg class="content-box__image">
-            <use href="./img/why-image.svg#why-image"></use>
-          </svg>
+          <div class="content-box__image">
+            <object
+              id="object-about"
+              data="./img/why-image.svg"
+              type="image/svg+xml"
+            >
+              Your browser doesn't support SVG
+            </object>
+          </div>
         </div>
       </section>
 
       <section id="contact" class="section section-contact">
         <div class="content-box">
-          <svg class="content-box__image">
-            <use href="./img/contact-image.svg#contact-image"></use>
-          </svg>
-
+          <div class="content-box__image">
+            <object
+              id="object-about"
+              data="./img/contact-image.svg"
+              type="image/svg+xml"
+            >
+              Your browser doesn't support SVG
+            </object>
+          </div>
           <div class="content-box__text-box">
-            <h2>Kontakt</h2>
-            <hr />
-            <p>
+            <div class="section-title">
+              <h2>Kontakt</h2>
+              <hr />
+            </div>
+            <p class="section-text">
               Zobacz nasze kanały społecznościowe, aby być z nami na bieżąco:
             </p>
           </div>
@@ -158,9 +178,33 @@
       </section>
     </main>
 
-    <!-- <footer>
-      <span class="attribution">
-        Image by <a href="https://www.freepik.com/free-vector/hand-drawn-minimal-background_15273865.htm#query=hand%20drawn%20abstract&position=3&from_view=keyword&track=ais">Freepik</a></span>
-    </footer> -->
+    <footer class="footer">
+      <p class="footer__logo">PzG</p>
+      <ul class="footer__list">
+        <li class="footer__list--item">
+          <a href="about" class="footer__list--link about">O nas</a>
+        </li>
+        <li class="footer__list--item">
+          <a href="goals" class="footer__list--link goals">Nasz cel</a>
+        </li>
+        <li class="footer__list--item">
+          <a href="why" class="footer__list--link why">Dlaczego?</a>
+        </li>
+        <li class="footer__list--item">
+          <a href="contact" class="footer__list--link contact">Kontakt</a>
+        </li>
+      </ul>
+      <p class="footer__copyright-notice">
+        Copyright &copy; 2023 by Wiktor Sienkiewicz. All rights reserved.
+        <br />
+        <span class="attribution">
+          Header background image by
+          <a
+            href="https://www.freepik.com/free-vector/hand-drawn-minimal-background_15273865.htm#query=hand%20drawn%20abstract&position=3&from_view=keyword&track=ais"
+            >Freepik</a
+          ></span
+        >
+      </p>
+    </footer>
   </body>
 </html>

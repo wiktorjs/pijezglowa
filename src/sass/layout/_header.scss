@@ -81,7 +81,7 @@
             margin-left: 1rem;
             fill: $color-secondary-dark;
 
-            transition: fill 0.4s ease, transform 0.1s linear;
+            transition: fill 0.4s ease, transform 0.4s .4s ease;
           }
 
           &:hover {
@@ -89,7 +89,7 @@
           }
           &:hover .header__btn--icon {
             fill: $color-primary-dark;
-            transform: translateY(1px);
+            transform: scale(1.2) rotate(360deg);
           }
 
           @include respond(phone) {

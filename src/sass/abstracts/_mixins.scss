@@ -12,6 +12,15 @@
   }
 }
 
+@mixin navigationColourHover($link, $color) {
+  &.#{$link} {
+    &:hover {
+      color: $color;
+      transform: translateY(-1px);
+    }
+  }
+}
+
 // | === MEDIA QUERIES ===
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {

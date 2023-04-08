@@ -48,34 +48,14 @@
       text-decoration: none;
       font-weight: 600;
       letter-spacing: 2px;
+      display: inline-block;
+      
+      transition: color, transform, 0.3s ease;
 
-      transition: color 0.2s ease;
-
-      // todo FUNCTIONS
-
-      &.about {
-        &:hover {
-          color: $color-about-dark;
-        }
-      }
-
-      &.goals {
-        &:hover {
-          color: $color-goals-dark;
-        }
-      }
-
-      &.why {
-        &:hover {
-          color: $color-why-dark;
-        }
-      }
-
-      &.contact {
-        &:hover {
-          color: $color-contact-dark;
-        }
-      }
+      @include navigationColourHover('about',  $color-about-dark);
+      @include navigationColourHover('goals',  $color-goals-dark);
+      @include navigationColourHover('why',  $color-why-dark);
+      @include navigationColourHover('contact',  $color-contact-dark);
 
       @include respond(tab-port) {
         font-size: 2rem;

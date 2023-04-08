@@ -1,0 +1,65 @@
+.footer {
+  position: relative;
+  height: 30rem;
+  padding: 5rem;
+  text-align: center;
+  background-color: $color-primary;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    flex: 0 0 100%;
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 8px;
+
+    color: inherit;
+  }
+
+  &__list {
+    flex: 0 0 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+
+    &--link,
+    &--link:visited,
+    &--link:active {
+        display: inline-block;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.8rem;
+      transition: color, transform,  0.3s ease;
+
+      @include navigationColourHover('about', $color-about-dark);
+      @include navigationColourHover('goals', $color-goals-dark);
+      @include navigationColourHover('why', $color-why-dark);
+      @include navigationColourHover('contact', $color-contact-dark);
+    }
+  }
+
+  &__copyright-notice {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    opacity: .5;
+  }
+}
+
+// | === ATTRIBUTION ===
+.attribution {
+  color: $color-secondary-dark;
+  opacity: 0.5;
+  font-size: 1rem;
+
+  & > a {
+    &,
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+  }
+}
