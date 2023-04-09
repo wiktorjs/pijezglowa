@@ -1,4 +1,4 @@
-<svg id="eP6q1uHVfTs1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -2 835.579 700.385" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+<svg id="eP6q1uHVfTs1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -2 835.579 700.385" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" class="stop-animation">
 <style><![CDATA[
 
 .stop-animation > .animated, .stop-animation > * > .animated {
@@ -74,23 +74,7 @@
         transform: translate(603.248271px, 97.355537px) rotate(-0.316083deg);
       }
     }
-    #BEERBOTTLE_ts {
-      animation: BEERBOTTLE_ts__ts 3600ms linear .2s 1 normal forwards;
-    }
-    @keyframes BEERBOTTLE_ts__ts {
-      0% {
-        transform: scale(1, 0.88);
-      }
-      8.333333% {
-        transform: scale(1, 0.88);
-      }
-      22.222222% {
-        transform: scale(1, 1);
-      }
-      100% {
-        transform: scale(1, 1);
-      }
-    }
+
     #BEERFOAM {
       animation: BEERFOAM_c_o 3600ms linear .2s 1 normal forwards;
     }

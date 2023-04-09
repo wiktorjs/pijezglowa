@@ -64,13 +64,13 @@
 
 // ! SECTION CONTENT ANIMATION
 .section-title {
-  transform: translateY(-100%);
+  transform: translateY(-80%);
   opacity: 0;
   transition: transform, opacity, 0.5s ease-out;
 }
 
 .section-text {
-  transform: translateY(100%);
+  transform: translateY(20%);
   opacity: 0;
   transition: transform, opacity, 0.5s .4s ease-out;
 }

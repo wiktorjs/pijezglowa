@@ -34,7 +34,7 @@ class AnimationView {
   animateContent() {
     const contentBox = this._section
       .querySelector('.content-box')
-      .querySelector('.content-box__text-box');
+      ?.querySelector('.content-box__text-box');
     if (!contentBox) return;
 
     const sectionTitle = contentBox.querySelector('.section-title');
