@@ -2,41 +2,53 @@ class AnimationView {
   constructor(section) {
     this._section = document.getElementById(`${section}`);
     this._object = this._section.querySelector('object');
-
-    this._object.addEventListener('load', this.observeSection.bind(this));
   }
 
+  #svgElement;
+  #objectLoaded = false;
+
+  /**
+   *
+   * @param {[]} entries array of entries passed from Intersection Observer API, each element is an object containing info about section intersection state
+   * @returns null
+   */
   playAnimation(entries) {
     const [entry] = entries;
 
-    const svgElement = this._object.contentDocument.querySelector('svg');
+    // Add event listener for an object load - if it loads, set the #objectLoaded to true
+    this._object.addEventListener(
+      'load',
+      (() => {
+        // Define svgElement
+        this.#svgElement = this._object.contentDocument.querySelector('svg');
+        // If the user is currently intersecting and an element loads, add the animation (else it'd be in initial state as long as user doesn't enter the section again)
+        entry.isIntersecting && this.#svgElement.classList.remove('stop-animation');
 
-    if (!entry.isIntersecting) {
-      // Prevent animation from playing if section is not intersected
-      svgElement.classList.add('stop-animation');
-      return;
-    }
+        // Set#objectLoaded to true
+        this.#objectLoaded = true
+      }).bind(this)
+    );
 
-    svgElement.classList.remove('stop-animation');
+    // If object has loaded and section is intersected animate SVG image
+    
+      if(this.#objectLoaded && !entry.isIntersecting) this.#svgElement.classList.add('stop-animation');
+      if(this.#objectLoaded && entry.isIntersecting) this.#svgElement.classList.remove('stop-animation');
 
-    this.animateContent();
+    // Return when the section isn't intersected
+    if (!entry.isIntersecting) return;
+
+    // Animate text content (heading, paragraph) upon section intersection (first-time section "visit")
+    this.#animateContent(entry);
   }
 
-  #sectionObserver = new IntersectionObserver(this.playAnimation.bind(this), {
-    // % of section visibility to trigger playAnimation method
-    threshold: 0.6,
-  });
-
-  #headerObserver = new IntersectionObserver(this.playAnimation.bind(this), {
-    rootMargin: '10%',
-  });
-
-  animateContent() {
+  #animateContent() {
+    // Check if a section contains contentBox. Guard clause implemented for header section which does not contain this box.
     const contentBox = this._section
       .querySelector('.content-box')
       ?.querySelector('.content-box__text-box');
     if (!contentBox) return;
 
+    // Animate suitable content with proper animation
     const sectionTitle = contentBox.querySelector('.section-title');
     const sectionText = contentBox.querySelector('.section-text');
 
@@ -44,10 +56,13 @@ class AnimationView {
     sectionText.classList.add('section-text--visible');
   }
 
+  #sectionObserver = new IntersectionObserver(this.playAnimation.bind(this), {
+    // % of section visibility to trigger playAnimation method
+    threshold: 0.6,
+  });
+
   observeSection() {
-    this._section.classList.contains('header')
-      ? this.#headerObserver.observe(this._section)
-      : this.#sectionObserver.observe(this._section);
+    this.#sectionObserver.observe(this._section);
   }
 }
 
@@ -56,6 +71,15 @@ class AnimationView {
 class Header extends AnimationView {
   constructor() {
     super('header');
+  }
+
+  #sectionObserver = new IntersectionObserver(this.playAnimation.bind(this), {
+    // % of section visibility to trigger playAnimation method
+    rootMargin: '-10%',
+  });
+
+  observeSection() {
+    this.#sectionObserver.observe(this._section);
   }
 }
 

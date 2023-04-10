@@ -1,5 +1,4 @@
-
-import {AboutSection, GoalsSection} from "./animationView"
+import { HeaderView, AboutSection, GoalsSection, WhySection, ContactSection } from "./animationView"
 
 const dynamicHeaderImageHeight = function () {
   const headerImage = document.querySelector('.header__title--svg-image');
@@ -35,7 +34,8 @@ const mobileNavigationListener = function () {
 const init = function () {
   dynamicHeaderImageHeight();
   mobileNavigationListener();
-//   animationView.sectionsoObserversHandler('about', 'object-about');
+  const sections = [HeaderView, AboutSection, GoalsSection, WhySection, ContactSection];
+  sections.forEach(section => section.observeSection());  
 };
 
 init();
