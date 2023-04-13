@@ -1,21 +1,98 @@
-// | === ATTRIBUTION ===
-.attribution {
-    position: absolute;
-    bottom: 0;
-  
-    padding: 2rem;
-    color: $color-primary-dark;
-    opacity: 0.8;
-    font-size: 1rem;
-  
-    & > a {
-      &,
-      &:link,
-      &:visited {
-        text-decoration: none;
-        z-index: 5;
-        color: inherit;
-        opacity: inherit;
-      }
+// | === COMMON SECTION STYLING ===
+.section {
+  height: calc(100vh - 8rem);
+  min-height: 45rem;
+  padding: 5rem;
+
+  @include sectionColorPallete('about', $color-about, $color-about-dark);
+  @include sectionColorPallete('goals', $color-goals, $color-goals-dark);
+  @include sectionColorPallete('why', $color-why, $color-why-dark);
+  @include sectionColorPallete('contact', $color-contact, $color-contact-dark);
+
+  & p {
+    color: $color-secondary-dark;
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  hr {
+    height: 3px;
+    border: none;
+    margin: auto;
+    width: 15rem;
+  }
+
+  @include respond(phone) {
+    height: max-content;
+  }
+}
+
+.content-box {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+
+  @include respond(phone) {
+    // grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+
+    &--reverse {
+      flex-direction: column-reverse;
     }
   }
+
+  &__image {
+    padding: 3rem;
+    height: 80%;
+    width: 80%;
+    display: flex;
+
+    @include respond(phone) {
+      height: 30rem;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__text-box {
+    position: relative;
+    padding: 0 5rem;
+    text-align: justify;
+    z-index: 2;
+
+    @include respond(phone) {
+      margin-top: 1rem;
+    }
+  }
+}
+
+// ! SECTION CONTENT ANIMATION
+.section-title {
+  transform: translateY(-80%);
+  opacity: 0;
+  transition: transform, opacity, 0.5s ease-out;
+}
+
+.section-text {
+  transform: translateY(20%);
+  opacity: 0;
+  transition: transform, opacity, 0.5s .4s ease-out;
+}
+
+.section-title--visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.section-text--visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+

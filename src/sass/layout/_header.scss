@@ -1,0 +1,154 @@
+.header {
+  position: relative;
+  margin-top: -8rem;
+
+  min-height: 600px;
+  height: 90vh;
+  max-height: 80rem;
+
+  background-color: $color-secondary;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.15) 100%,
+      #000
+    ),
+    url(../img/header-background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-bottom: 1px solid $color-secondary-dark;
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+
+    height: 80%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--text-box {
+      margin-right: 5rem;
+      flex: 0 0 40%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      & > * {
+        text-align: center;
+      }
+
+      .header {
+        &__text {
+          flex: 1 0 100%;
+          color: $color-secondary-light;
+          text-shadow: $text-outline;
+          font-weight: 600;
+          font-size: 1.5rem;
+
+          @include respond(phone) {
+            font-size: 2rem;
+            text-shadow: .8px .8px 0 #000;
+          }
+        }
+
+        &__heading {
+          flex: 1 0 100%;
+          margin: 0 0 1.3rem;
+          text-shadow: $text-outline;
+
+          @include respond(phone) {
+            font-size: 4rem;
+          }
+        }
+
+        &__btn {
+          flex: 0 1 40%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          margin-top: 3rem;
+          padding: 3.3rem;
+
+          border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+
+          animation: button__animate 4s cubic-bezier(0.175, 0.185, 0.32, 0.275)
+            1s infinite;
+          will-change: border-radius;
+          transition: color, 0.4s ease;
+
+          &--icon {
+            height: 2.2rem;
+            width: 2.2rem;
+            margin-left: 1rem;
+            fill: $color-secondary-dark;
+
+            transition: fill, transform, 0.4s ease;
+          }
+
+          &:hover {
+            color: $color-primary-dark;
+          }
+          &:hover .header__btn--icon {
+            fill: $color-primary-dark;
+            transform: scale(1.2) rotate(360deg);
+          }
+
+          @include respond(phone) {
+            flex: 0 0 30%;
+            padding: 2.2rem;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+
+      @include respond(phone) {
+        flex: 0 0 75%;
+        // width: 75%;
+        margin: 0 0 1%;
+      }
+    }
+
+    &--svg-image {
+      align-self: flex-end;
+      flex: 1;
+      overflow: visible;
+      position: relative;
+
+      svg {
+        position: absolute;
+        bottom: -1px;
+        max-height: 100%;
+        width: 100%;
+        overflow: visible;
+      }
+
+      @include respond(phone) {
+        flex: none;
+        width: 80%;
+        align-self: center;
+      }
+    }
+
+    @include respond(phone) {
+      flex-direction: row;
+      flex-wrap: wrap-reverse;
+      align-content: end;
+      justify-content: center;
+    }
+  }
+
+  @include respond(phone) {
+    background-position: 45%;
+  }
+  
+ @media only screen and (max-width: 25em) {
+  min-height: 550px;
+ }
+}
+

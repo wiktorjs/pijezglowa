@@ -25,7 +25,7 @@ html {
       font-size: 50%;
     }
 
-    @include respond(tab-port) {
+    @include respond(phone) {
       font-size: 40%;
     }
 }
@@ -33,11 +33,16 @@ html {
 body {
     box-sizing: border-box;
     font-size: 1.6rem;
+    hyphens: auto;
 
     // ? Define
     font-family: 'Montserrat', sans-serif;
     line-height: normal;
 
     padding: 3rem;
+
+    @include respond(tab-port) {
+      padding: 0;
+    }
     
 }

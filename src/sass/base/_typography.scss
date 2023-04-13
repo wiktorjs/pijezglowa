@@ -1,12 +1,27 @@
 h1 {
     font-weight: 900;
     font-size: 5rem;
-    // font-style: italic;
     text-decoration: underline;
     color: $color-primary-light;
     
     padding: .2rem;
     letter-spacing: 1px;
     line-height: 1.2;
+
+    hyphens: none;
+
+    @include respond(tab-port) {
+        font-size: 4rem;
+      }
+
+    @include respond(phone) {
+        font-size: 3rem;
+      }
  
+}
+
+h2 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
