@@ -1,6 +1,7 @@
 // | === COMMON SECTION STYLING ===
 .section {
   height: calc(100vh - 8rem);
+  min-height: 45rem;
   padding: 5rem;
 
   @include sectionColorPallete('about', $color-about, $color-about-dark);
@@ -21,6 +22,10 @@
     margin: auto;
     width: 15rem;
   }
+
+  @include respond(phone) {
+    height: max-content;
+  }
 }
 
 .content-box {
@@ -33,7 +38,13 @@
   place-items: center;
 
   @include respond(phone) {
-    grid-template-columns: 1fr;
+    // grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+
+    &--reverse {
+      flex-direction: column-reverse;
+    }
   }
 
   &__image {
@@ -43,8 +54,9 @@
     display: flex;
 
     @include respond(phone) {
-      grid-area: 1 / 1;
-      opacity: 0.2;
+      height: 30rem;
+      width: 100%;
+      justify-content: center;
     }
   }
 
@@ -55,9 +67,7 @@
     z-index: 2;
 
     @include respond(phone) {
-      margin-top: 0;
-      align-self: center;
-      grid-area: 1 / 1;
+      margin-top: 1rem;
     }
   }
 }

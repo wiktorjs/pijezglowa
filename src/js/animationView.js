@@ -12,9 +12,9 @@ class AnimationView {
    * @param {[]} entries array of entries passed from Intersection Observer API, each element is an object containing info about section intersection state
    * @returns null
    */
-  playAnimation(entries) {
+  playAnimation(entries, observer) {
     const [entry] = entries;
-
+    
     // Add event listener for an object load - if it loads, set the #objectLoaded to true
     this._object.addEventListener(
       'load',
@@ -36,7 +36,7 @@ class AnimationView {
 
     // Return when the section isn't intersected
     if (!entry.isIntersecting) return;
-
+    console.log(this._section)
     // Animate text content (heading, paragraph) upon section intersection (first-time section "visit")
     this.#animateContent(entry);
   }
@@ -58,7 +58,8 @@ class AnimationView {
 
   #sectionObserver = new IntersectionObserver(this.playAnimation.bind(this), {
     // % of section visibility to trigger playAnimation method
-    threshold: 0.6,
+    // rootMargin: '-10%',
+    threshold: .6,
   });
 
   observeSection() {

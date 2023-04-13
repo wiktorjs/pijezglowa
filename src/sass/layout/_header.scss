@@ -2,7 +2,7 @@
   position: relative;
   margin-top: -8rem;
 
-  min-height: 550px;
+  min-height: 600px;
   height: 90vh;
   max-height: 80rem;
 
@@ -50,7 +50,7 @@
           font-size: 1.5rem;
 
           @include respond(phone) {
-            font-size: 1.3rem;
+            font-size: 2rem;
             text-shadow: .8px .8px 0 #000;
           }
         }
@@ -59,6 +59,10 @@
           flex: 1 0 100%;
           margin: 0 0 1.3rem;
           text-shadow: $text-outline;
+
+          @include respond(phone) {
+            font-size: 4rem;
+          }
         }
 
         &__btn {
@@ -98,6 +102,7 @@
             flex: 0 0 30%;
             padding: 2.2rem;
             font-size: 1.3rem;
+            margin-bottom: 2rem;
           }
         }
       }
@@ -138,13 +143,12 @@
     }
   }
 
-  // ! REFACTOR
-  @media only screen and (max-width: 56.25em) and (max-height: 25em) {
-    max-height: 70rem;
-  }
-
   @include respond(phone) {
     background-position: 45%;
   }
+  
+ @media only screen and (max-width: 25em) {
+  min-height: 550px;
+ }
 }
 
