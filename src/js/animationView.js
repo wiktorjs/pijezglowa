@@ -36,7 +36,7 @@ class AnimationView {
 
     // Return when the section isn't intersected
     if (!entry.isIntersecting) return;
-    console.log(this._section)
+  
     // Animate text content (heading, paragraph) upon section intersection (first-time section "visit")
     this.#animateContent(entry);
   }
@@ -59,7 +59,7 @@ class AnimationView {
   #sectionObserver = new IntersectionObserver(this.playAnimation.bind(this), {
     // % of section visibility to trigger playAnimation method
     // rootMargin: '-10%',
-    threshold: .6,
+    threshold: .9,
   });
 
   observeSection() {
