@@ -1,3 +1,4 @@
+// This functionality isn't completely finished. Because of time constraints it might be added later.
 class AnimationView {
   constructor(section) {
     this._section = document.getElementById(`${section}`);
@@ -14,6 +15,7 @@ class AnimationView {
    */
   playAnimation(entries, observer) {
     const [entry] = entries;
+    
     
     // Add event listener for an object load - if it loads, set the #objectLoaded to true
     this._object.addEventListener(
@@ -34,11 +36,13 @@ class AnimationView {
       if(this.#objectLoaded && !entry.isIntersecting) this.#svgElement.classList.add('stop-animation');
       if(this.#objectLoaded && entry.isIntersecting) this.#svgElement.classList.remove('stop-animation');
 
+    
+
     // Return when the section isn't intersected
     if (!entry.isIntersecting) return;
   
     // Animate text content (heading, paragraph) upon section intersection (first-time section "visit")
-    this.#animateContent(entry);
+    this.#animateContent();
   }
 
   #animateContent() {
@@ -108,6 +112,7 @@ class Contact extends AnimationView {
   }
 }
 
+/*
 const HeaderView = new Header();
 const AboutSection = new About();
 const GoalsSection = new Goals();
@@ -115,3 +120,4 @@ const WhySection = new Why();
 const ContactSection = new Contact();
 
 export { HeaderView, AboutSection, GoalsSection, WhySection, ContactSection };
+*/

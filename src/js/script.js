@@ -1,4 +1,4 @@
-import { HeaderView, AboutSection, GoalsSection, WhySection, ContactSection } from "./animationView"
+// import { HeaderView, AboutSection, GoalsSection, WhySection, ContactSection } from "./animationView"
 
 const dynamicHeaderImageHeight = function () {
   const headerImage = document.querySelector('.header__title--svg-image');
@@ -30,12 +30,37 @@ const mobileNavigationListener = function () {
   });
 };
 
+const sectionsObservers = function () {
+
+  const displayContent = function (entries, observer) {
+    const [entry] = entries;
+    if (!entry.isIntersecting) return;
+
+    // Upon intersection remove hidden classes.
+    const contentParent = entry.target.querySelector('.content-box__text-box');
+    contentParent.querySelector('.section-title').classList.remove('hidden');
+    contentParent.querySelector('.section-text').classList.remove('hidden');
+
+    // Unobserve section as it is not needed to observe it any further.
+    observer.unobserve(entry.target);
+  };
+
+  const sectionObserver = new IntersectionObserver(displayContent, {
+    threshold: 0.6,
+  });
+  
+  const sections = document.querySelectorAll('section');
+  sections.forEach(section => sectionObserver.observe(section));
+};
 
 const init = function () {
   dynamicHeaderImageHeight();
   mobileNavigationListener();
+  sectionsObservers();
+  /*
   const sections = [HeaderView, AboutSection, GoalsSection, WhySection, ContactSection];
   sections.forEach(section => section.observeSection());  
+  */
 };
 
 init();

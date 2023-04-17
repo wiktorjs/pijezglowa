@@ -74,17 +74,27 @@
 
 // ! SECTION CONTENT ANIMATION
 .section-title {
-  transform: translateY(-80%);
-  opacity: 0;
+  // transform: translateY(-80%);
+  // opacity: 0;
   transition: transform, opacity, 0.5s ease-out;
+  &.hidden {
+    transform: translateY(-80%);
+    opacity: 0;
+  }
 }
 
 .section-text {
-  transform: translateY(20%);
-  opacity: 0;
+  // transform: translateY(20%);
+  // opacity: 0;
   transition: transform, opacity, 0.5s .4s ease-out;
+
+  &.hidden {
+    transform: translateY(20%);
+    opacity: 0;
+  }
 }
 
+/*
 .section-title--visible {
   transform: translateY(0);
   opacity: 1;
@@ -93,4 +103,15 @@
 .section-text--visible {
   transform: translateY(0);
   opacity: 1;
+}
+*/
+
+
+
+// ! TEMP STYLING
+
+.section-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
