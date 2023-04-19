@@ -23,9 +23,8 @@ const sectionsObservers = function () {
     if (!entry.isIntersecting) return;
 
     // Upon intersection remove hidden classes.
-    const contentParent = entry.target.querySelector('.content-box__text-box');
-    contentParent.querySelector('.section-title').classList.remove('hidden');
-    contentParent.querySelector('.section-text').classList.remove('hidden');
+    const content = entry.target.querySelector('.content-box__text-box');
+   content.classList.remove('hidden');
 
     // Unobserve section as it is not needed to observe it any further.
     observer.unobserve(entry.target);
