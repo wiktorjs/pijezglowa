@@ -1,19 +1,5 @@
 // import { HeaderView, AboutSection, GoalsSection, WhySection, ContactSection } from "./animationView"
 
-const dynamicHeaderImageHeight = async function () {
-  const headerImage = document.querySelector('.header__title--svg-image');
-
-  // | Without "load" window event so that users can't see flickering that occurs for a brief moment
-  headerImage.style.height = `${
-    headerImage.getBoundingClientRect().width / 1.52
-  }px`;
-
-  window.addEventListener('resize', () => {
-    headerImage.style.height = `${
-      headerImage.getBoundingClientRect().width / 1.52
-    }px`;
-  });
-};
 
 const mobileNavigationListener = function () {
   const nav = document.querySelector('nav');
@@ -54,7 +40,6 @@ const sectionsObservers = function () {
 };
 
 const init = function () {
-  // dynamicHeaderImageHeight();
   mobileNavigationListener();
   sectionsObservers();
   /*

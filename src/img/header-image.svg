@@ -1,10 +1,10 @@
-<svg id="header-image" viewBox="0 -2 858.167 550.832" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+<svg id="header-image" viewBox="0 -2 835.579 700.385" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
   <defs>
     <style bx:fonts="Montserrat">@import url(https://fonts.googleapis.com/css2?family=Montserrat%3Aital%2Cwght%400%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900&amp;display=swap);</style>
   </defs>
   <path style="fill: rgb(245, 235, 224);" d="M 78.173 48.958 L 78.677 46.379 L 79.485 42.223 L 83.677 36.604 L 88.849 34.503 L 90.295 34.704 L 629.158 34.714 L 633.396 37.828 L 636.708 42.978 L 637.951 48.387 L 637.977 287.91 L 636.825 292.738 L 633.261 298.089 L 626.624 301.012 L 88.898 300.756 L 84.53 299.097 L 80.482 294.96 L 78.01 288.213 L 78.173 48.958 Z"></path>
   <g transform="matrix(1.088147, 0, 0, 1.026334, -133.577148, 66.577339)">
-    <text style="fill:#2f2e41; font-family: Montserrat; font-size: 27.8px; font-weight: 600; letter-spacing: 2.2px; paint-order: fill; stroke-miterlimit: 0; stroke-width: 0.945859px; white-space: pre; " x="345.204" y="19.652">Piję z Głową!</text>
+    <text style="fill:#2f2e41; font-family: Montserrat, sans-serif; font-size: 27.8px; font-weight: 600; letter-spacing: 2.2px; paint-order: fill; stroke-miterlimit: 0; stroke-width: 0.945859px; white-space: pre; " x="345.204" y="19.652">Piję z Głową!</text>
     <g style="" transform="matrix(1.634902, 0, 0, 0.956496, -139.583847, 8.354567)">
       <path d="M 376.33 51.026 L 223.228 51.026 C 221.366 51.026 219.851 49.42 219.851 47.446 C 219.851 45.472 221.366 43.867 223.228 43.867 L 376.33 43.867 C 378.192 43.867 379.706 45.472 379.706 47.446 C 379.706 49.42 378.192 51.026 376.33 51.026 Z" style="fill: rgb(255, 255, 255);"></path>
       <path d="M 350.879 71.026 L 222.679 71.026 C 221.12 71.026 219.851 69.42 219.851 67.446 C 219.851 65.472 221.12 63.867 222.679 63.867 L 350.879 63.867 C 352.438 63.867 353.706 65.472 353.706 67.446 C 353.706 69.42 352.438 71.026 350.879 71.026 Z" style="fill: rgb(255, 255, 255);"></path>
@@ -152,6 +152,6 @@
   </g>
   <g transform="matrix(1, 0, 0, 1, -9.301527, 204.059601)">
     <ellipse cx="145.44339" cy="139.35715" rx="23.01268" ry="22.52779" style="fill: rgb(169, 223, 207);"></ellipse>
-    <text style="fill: rgb(255, 255, 255); font-family: Montserrat; font-size: 24px; font-weight: 700; white-space: pre;" transform="matrix(0.95104, -0.309067, 0.309067, 0.95104, -36.505501, 51.398525)" x="133.382" y="148.022">5+</text>
+    <text style="fill: rgb(255, 255, 255); font-family: Montserrat, sans-serif; font-size: 24px; font-weight: 700; white-space: pre;" transform="matrix(0.95104, -0.309067, 0.309067, 0.95104, -36.505501, 51.398525)" x="133.382" y="148.022">5+</text>
   </g>
 </svg>
