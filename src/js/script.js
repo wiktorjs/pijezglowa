@@ -41,6 +41,7 @@ const sectionsObservers = function () {
 const init = function () {
   mobileNavigationListener();
   sectionsObservers();
+
   /*
   const sections = [HeaderView, AboutSection, GoalsSection, WhySection, ContactSection];
   sections.forEach(section => section.observeSection());  

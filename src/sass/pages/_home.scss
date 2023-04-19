@@ -3,7 +3,7 @@
   height: calc(100vh - 8rem);
   min-height: 45rem;
   padding: 5rem;
-  
+
   @media only screen and (min-height: 860px) {
     max-height: 60vh;
   }
@@ -90,7 +90,7 @@
     }
 
     & .section-content {
-      transition-delay: .4s;
+      transition-delay: 0.4s;
     }
 
     &.hidden {
@@ -108,15 +108,18 @@
     }
   }
 
+  &--contact {
+    overflow: visible;
+  }
 }
 
-// | Contact section icons 
+// | Contact section icons
 
 .contact-icons {
   margin-top: 4rem;
   display: flex;
   justify-content: center;
-  gap: 2rem; 
+  gap: 2rem;
 
   @include respond(phone) {
     margin: 4rem 0 2rem;
@@ -125,11 +128,12 @@
 
 .contact-icon {
   display: inline-block;
-  height: 5rem; width: 5rem;
+  height: 5rem;
+  width: 5rem;
   fill: $color-secondary-dark;
   cursor: pointer;
 
-  transition: fill .2s linear;
+  transition: fill 0.2s linear;
   &:hover {
     fill: $color-contact-dark;
   }
