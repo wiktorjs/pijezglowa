@@ -51,7 +51,7 @@
 
           @include respond(phone) {
             font-size: 2rem;
-            text-shadow: .8px .8px 0 #000;
+            text-shadow: 0.8px 0.8px 0 #000;
           }
         }
 
@@ -108,9 +108,13 @@
       }
 
       @include respond(phone) {
-        flex: 0 0 75%;
-        // width: 75%;
+        flex: 0 0 100%;
         margin: 0 0 1%;
+
+        & .header__heading,
+        & .header__text {
+          flex: 0 0 75% !important;
+        }
       }
     }
 
@@ -133,7 +137,7 @@
       flex-direction: row;
       flex-wrap: wrap-reverse;
       align-content: end;
-      justify-content: center;
+      justify-content: start;
     }
   }
 
@@ -141,9 +145,8 @@
     background-position-x: 45%;
     background-attachment: unset;
   }
-  
- @media only screen and (max-width: 25em) {
-  min-height: 550px;
- }
-}
 
+  @media only screen and (max-width: 25em) {
+    min-height: 550px;
+  }
+}
