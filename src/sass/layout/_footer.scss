@@ -36,7 +36,7 @@
 
       @include navigationColourHover('about', $color-about-dark);
       @include navigationColourHover('goals', $color-goals-dark);
-      @include navigationColourHover('why', $color-why-dark);
+      @include navigationColourHover('purpose', $color-purpose-dark);
       @include navigationColourHover('contact', $color-contact-dark);
     }
   }

@@ -1,4 +1,4 @@
-// import { HeaderView, AboutSection, GoalsSection, WhySection, ContactSection } from "./animationView"
+// import { HeaderView, AboutSection, GoalsSection, PurposeSection, ContactSection } from "./animationView"
 
 
 const mobileNavigationListener = function () {
@@ -43,7 +43,7 @@ const init = function () {
   sectionsObservers();
 
   /*
-  const sections = [HeaderView, AboutSection, GoalsSection, WhySection, ContactSection];
+  const sections = [HeaderView, AboutSection, GoalsSection, PurposeSection, ContactSection];
   sections.forEach(section => section.observeSection());  
   */
 };

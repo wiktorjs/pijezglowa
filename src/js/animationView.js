@@ -100,9 +100,9 @@ class Goals extends AnimationView {
   }
 }
 
-class Why extends AnimationView {
+class Purpose extends AnimationView {
   constructor() {
-    super('why');
+    super('purpose');
   }
 }
 
@@ -116,8 +116,8 @@ class Contact extends AnimationView {
 const HeaderView = new Header();
 const AboutSection = new About();
 const GoalsSection = new Goals();
-const WhySection = new Why();
+const PurposeSection = new Purpose();
 const ContactSection = new Contact();
 
-export { HeaderView, AboutSection, GoalsSection, WhySection, ContactSection };
+export { HeaderView, AboutSection, GoalsSection, PurposeSection, ContactSection };
 */
