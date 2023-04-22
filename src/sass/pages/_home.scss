@@ -1,12 +1,16 @@
 // | === COMMON SECTION STYLING ===
 .section {
   height: calc(100vh - 8rem);
-  min-height: 45rem;
+  min-height: 65rem;
   padding: 5rem;
+
+  @media only screen and (min-height: 860px) {
+    max-height: 60vh;
+  }
 
   @include sectionColorPallete('about', $color-about, $color-about-dark);
   @include sectionColorPallete('goals', $color-goals, $color-goals-dark);
-  @include sectionColorPallete('why', $color-why, $color-why-dark);
+  @include sectionColorPallete('purpose', $color-purpose, $color-purpose-dark);
   @include sectionColorPallete('contact', $color-contact, $color-contact-dark);
 
   & p {
@@ -24,7 +28,14 @@
   }
 
   @include respond(phone) {
+    max-height: none;
     height: max-content;
+  }
+
+  &-image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
   }
 }
 
@@ -33,8 +44,8 @@
   width: 100%;
   overflow: hidden;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  place-content: center;
   place-items: center;
 
   @include respond(phone) {
@@ -48,12 +59,14 @@
   }
 
   &__image {
+    flex: 0 0 50%;
     padding: 3rem;
     height: 80%;
     width: 80%;
     display: flex;
 
     @include respond(phone) {
+      flex: none;
       height: 30rem;
       width: 100%;
       justify-content: center;
@@ -61,6 +74,7 @@
   }
 
   &__text-box {
+    flex: 0 0 50%;
     position: relative;
     padding: 0 5rem;
     text-align: justify;
@@ -69,30 +83,102 @@
     @include respond(phone) {
       margin-top: 1rem;
     }
+
+    & > * {
+      transition: transform, opacity, 0.5s ease-out;
+      will-change: transform, opacity;
+    }
+
+    & .section-content {
+      transition-delay: 0.4s;
+
+      & .section-text--secondary {
+        transition: transform, opacity, 0.5s 0.8s ease;
+        will-change: transform, opacity;
+      }
+    }
+
+    &.hidden {
+      & .section {
+        &-title {
+          transform: translateY(-80%);
+          opacity: 0;
+        }
+      }
+
+      & .section-content {
+        transform: translateY(20%);
+        opacity: 0;
+
+        & .section-text--secondary {
+          transform: translateX(-50%);
+          opacity: 0;
+          &.reverse {
+            transform: translateX(50%);
+          }
+        }
+      }
+    }
   }
 }
 
-// ! SECTION CONTENT ANIMATION
-.section-title {
-  transform: translateY(-80%);
-  opacity: 0;
-  transition: transform, opacity, 0.5s ease-out;
+// | Contact section icons
+
+.contact-icons {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  @include respond(phone) {
+    margin: 4rem 0 2rem;
+  }
 }
 
-.section-text {
-  transform: translateY(20%);
-  opacity: 0;
-  transition: transform, opacity, 0.5s .4s ease-out;
+.contact-icons:has(> a > svg:hover) a > svg:not(:hover) {
+  transform: scale(0.9);
 }
 
-.section-title--visible {
-  transform: translateY(0);
-  opacity: 1;
+.contact-icon {
+  display: inline-block;
+  height: 5rem;
+  width: 5rem;
+  fill: $color-secondary-dark;
+  cursor: pointer;
+
+  transition: fill, transform, 0.3s ease;
+  will-change: fill, transform;
+  &:hover {
+    fill: $color-contact-dark;
+    transform: translateY(-3px) scale(1.05);
+  }
 }
 
-.section-text--visible {
-  transform: translateY(0);
-  opacity: 1;
+.contact-icon__box {
+  position: relative;
+
+  &--disabled {
+    span {
+      position: absolute;
+      bottom: 5px;
+      right: -5px;
+      transform: rotate(-30deg);
+      background-color: rgba(217, 176, 176, 0.7);
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $color-secondary-light;
+      text-shadow: $text-outline;
+      z-index: 2;
+    }
+
+    svg {
+      opacity: 0.5;
+      cursor: default;
+      &:hover {
+        fill: currentColor;
+        transform: none;
+      }
+    }
+  }
 }
-
-

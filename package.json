@@ -18,5 +18,13 @@
   "dependencies": {
     "core-js": "^3.29.1",
     "regenerator-runtime": "^0.13.11"
+  },
+  "parcel": {
+    "extends": "@parcel/config-default",
+    "optimization": {
+      "minify": {
+  
+      }
+    }
   }
 }

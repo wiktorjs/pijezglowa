@@ -5,6 +5,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="nadużywanie alkoholu, młodzież, zdrowie, uzależnienie od alkoholu, kampania społeczna, szkodliwość alkoholu, alkoholizm, edukacja, profilaktyka, społeczna odpowiedzialność, wpływ alkoholu na rozwój młodych ludzi"
+    />
+    <meta
+      name="description"
+      content="Dowiedz się o zagrożeniach związanych z nadużywaniem alkoholu pośród młodzieży i w jaki sposób wpływa to na ich przyszłość, zdrowie, i relacje z innymi. Nasza kampania ma na celu poszerzanie świadomości wśród młodzieży o negatywnych skutach zbyt dużego spożywania alkoholu. Dowiedz się więcej już teraz!"
+    />
+
     <title>Piję z Głową</title>
 
     <!-- Add fonts here -->
@@ -15,7 +24,7 @@
       rel="stylesheet"
     />
 
-    <!-- <link rel="icon" type="image/png" href="./img/favicon.png" /> -->
+    <link rel="icon" type="image/png" href="./img/png/logo.png" />
     <link rel="stylesheet" href="./sass/main.scss" />
 
     <script defer src="./js/script.js" type="module"></script>
@@ -23,9 +32,7 @@
 
   <body>
     <noscript>
-      <div style="height: 100vh; width: 100vw; background-color: #fff">
-        You need JavaScript enabled to run this app.
-      </div>
+      <div class="no-script">You need JavaScript enabled to run this app.</div>
     </noscript>
 
     <div class="nav-menu__button">
@@ -35,22 +42,20 @@
     </div>
 
     <nav class="nav">
-      <p class="nav__logo">PzG</p>
+      <a href="#" class="nav__logo">PzG</a>
       <!-- prettier-ignore -->
       <ul class="nav__list">
-        <li class="nav__list--item"><a class="nav__list--link about" href="#about">Statystyki</a></li>
-        <li class="nav__list--item"><a class="nav__list--link goals" href="#goals">Nasz cel</a></li>
-        <li class="nav__list--item"><a class="nav__list--link why" href="#why">Dlaczego?</a></li>
-        <li class="nav__list--item"><a class="nav__list--link contact" href="#contact">Kontakt</a></li>
+        <li class="nav__list--item"><a class="nav__list--link about" href="#wstęp">Statystyki</a></li>
+        <li class="nav__list--item"><a class="nav__list--link goals" href="#cel">Nasz cel</a></li>
+        <li class="nav__list--item"><a class="nav__list--link purpose" href="#dlaczego">Dlaczego?</a></li>
+        <li class="nav__list--item"><a class="nav__list--link contact" href="#kontakt">Kontakt</a></li>
       </ul>
     </nav>
 
     <header id="header" class="header">
       <div class="header__title">
         <div class="header__title--svg-image">
-          <object data="./img/header-image-ANIMATED.svg" type="image/svg+xml">
-            Your browser doesn't support SVG
-          </object>
+          <img src="./img/header-image.svg" alt="header image" />
         </div>
 
         <div class="header__title--text-box">
@@ -71,109 +76,158 @@
     </header>
 
     <main>
-      <section id="about" class="section section-about" data-value="an">
+      <section id="wstęp" class="section section-about">
         <div class="content-box">
-          <div class="content-box__text-box">
+          <div class="content-box__text-box hidden">
             <div class="section-title">
               <h2>Statystyki</h2>
               <hr />
             </div>
 
-            <p class="section-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis assumenda autem ipsa distinctio sint earum eveniet
-              aliquam quam maiores iste. Temporibus dicta nobis voluptatum
-              dolorum quibusdam alias voluptas ipsum optio!
-            </p>
+            <div class="section-content">
+              <p class="section-text">
+                Według badań przeprowadzonych przez Krajową Radę ds.
+                Przeciwdziałania Narkomanii, aż 60% młodzieży w wieku od 15 do
+                19 lat w Polsce przyznaje się do spożywania alkoholu. Wśród nich
+                najwięcej jest takich, którzy piją co najmniej raz w tygodniu
+                (około 40%). Co więcej, 10% badanych podaje, że pije alkohol
+                nawet codziennie.
+              </p>
+              <p class="section-text section-text--secondary">
+                Dodatkowo, badania wykazują, że wiele młodych osób w Polsce
+                zaczyna pić alkohol już w wieku 13-14 lat. Co ciekawe, wraz ze
+                wzrostem wieku, maleje liczba osób pijących alkohol, ale rośnie
+                częstotliwość jego spożycia. Oznacza to, że osoby, które nadal
+                piją, robią to co raz częściej.
+              </p>
+            </div>
           </div>
 
           <div class="content-box__image">
-            <object
-              id="object-about"
-              data="./img/about-image-ANIMATED.svg"
-              type="image/svg+xml"
-            >
-              Your browser doesn't support SVG
-            </object>
+            <img
+              class="section-image"
+              src="./img/about-image.svg"
+              alt="About section image"
+            />
           </div>
         </div>
       </section>
 
-      <section id="goals" class="section section-goals">
+      <section id="cel" class="section section-goals">
         <div class="content-box content-box--reverse">
           <div class="content-box__image">
-            <object
-              id="object-goals"
-              data="./img/goals-image-ANIMATED.svg"
-              type="image/svg+xml"
-            >
-              Your browser doesn't support SVG
-            </object>
+            <img
+              class="section-image"
+              src="./img/goals-image.svg"
+              alt="Goals section image"
+            />
           </div>
 
-          <div class="content-box__text-box">
+          <div class="content-box__text-box hidden">
             <div class="section-title">
               <h2>Nasz cel</h2>
               <hr />
             </div>
-            <p class="section-text">
-              Naszym celem jest uświadomienie młodego pokolenia o tym że nie
-              warto pić alkoholu w nadmiernych ilościach. Uwagę pragniemy
-              szczególnie skupić na konsekwencjach związanych ze zdrowiem oraz
-              innych problemach, jakie mogą z tego wynikać.
-            </p>
+            <div class="section-content">
+              <p class="section-text">
+                Głównym celem naszych działań jest edukacja młodego pokolenia na temat negatywnych skutków nadużywania alkoholu. W szczególności skupiamy się na konsekwencjach zdrowotnych i innych problemach, które wynikają z tego typu zachowań. Chcemy podkreślić, że spożywanie alkoholu w nadmiernych ilościach może prowadzić do poważnych trudności, których uniknięcie wymaga świadomych i odpowiedzialnych decyzji.
+              </p>
+              <p class="section-text section-text--secondary reverse">
+                Kampania powstała w ramach projektu <br />
+                <a target="_blank" href="https://zwolnienizteorii.pl/">"Zwolnionych z Teorii"</a>.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="why" class="section section-why">
-        <div id="why-content-box" class="content-box">
-          <div class="content-box__text-box">
+      <section id="dlaczego" class="section section-purpose">
+        <div id="purpose-content-box" class="content-box">
+          <div class="content-box__text-box hidden">
             <div class="section-title">
               <h2>Dlaczego?</h2>
               <hr />
             </div>
-            <p class="section-text">
-              W związku z rosnącym odsetkiem spożycia alkoholu przez osoby w
-              młodym wieku postanowiliśmy stworzyć kampanię społeczną dotyczącą
-              bezpiecznego spożywania napojów imprezowych. Nazwa kampanii ma na
-              celu przyciągnięcie uwagi i dotarcie do jak największej liczby
-              odbiorców w wieku 18-25 lat.
-            </p>
+            <div class="section-content">
+              <p class="section-text">
+                W odpowiedzi na wzrost spożycia alkoholu przez osoby w młodym wieku, podjęliśmy decyzję o stworzeniu kampanii społecznej, która ma na celu promowanie bezpiecznego i odpowiedzialnego spożywania napojów alkoholowych. Nazwa kampanii ma na celu przyciągnąć uwagę odbiorców i dotrzeć do jak największej liczby osób w wieku 18-25 lat, którzy są szczególnie narażeni na ryzyko związane z nadmiernym spożyciem alkoholu.
+              </p>
+              <p class="section-text section-text--secondary">
+                Warto zauważyć, że picie alkoholu przez młodzież wiąże się z
+                wieloma zagrożeniami dla zdrowia i życia. Wpływa negatywnie na
+                rozwój fizyczny i psychiczny, prowadzi do problemów w szkole, a
+                także zwiększa ryzyko wypadków drogowych i zachowań agresywnych.
+                Dlatego tak ważne jest edukowanie młodzieży na temat
+                szkodliwości alkoholu oraz podejmowanie działań, które ograniczą
+                dostępność alkoholu dla nieletnich.
+              </p>
+            </div>
           </div>
 
           <div class="content-box__image">
-            <object
-              id="object-why"
-              data="./img/why-image-ANIMATED.svg"
-              type="image/svg+xml"
-            >
-              Your browser doesn't support SVG
-            </object>
+            <img
+              class="section-image"
+              src="./img/purpose-image.svg"
+              alt="Purpose section image"
+            />
           </div>
         </div>
       </section>
 
-      <section id="contact" class="section section-contact">
-        <div class="content-box content-box--reverse">
+      <section id="kontakt" class="section section-contact">
+        <div class="content-box content-box--reverse content-box--contact">
           <div class="content-box__image">
-            <object
-              id="object-contact"
-              data="./img/contact-image.svg"
-              type="image/svg+xml"
-            >
-              Your browser doesn't support SVG
-            </object>
-
+            <img
+              class="section-image"
+              src="./img/contact-image.svg"
+              alt="Contact section image"
+            />
           </div>
-          <div class="content-box__text-box">
+
+          <div class="content-box__text-box hidden">
             <div class="section-title">
               <h2>Kontakt</h2>
               <hr />
             </div>
-            <p class="section-text">
-              Zobacz nasze kanały społecznościowe, aby być na bieżąco:
-            </p>
+            <div class="section-content">
+              <p class="section-text">
+                Zobacz nasze kanały społecznościowe, aby być na bieżąco:
+              </p>
+
+              <div class="contact-icons section-text--secondary reverse">
+                <div
+                  class="contact-icon__box contact-icon__box--disabled"
+                  aria-label="Odnośnik do witryny Facebook"
+                >
+                  <span>Soon!</span>
+                  <svg class="contact-icon" aria-hidden="true">
+                    <use href="./img/icons.svg#icon-facebook"></use>
+                  </svg>
+                </div>
+
+                <a
+                  href="https://www.instagram.com/pijezglowa/?igshid=YmMyMTA2M2Y%3D"
+                  target="_blank"
+                  class="contact-icon__box"
+                  aria-label="Odnośnik do witryny Instagram"
+                >
+                  <svg class="contact-icon" aria-hidden="true">
+                    <use href="./img/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+
+                <a
+                  href="#"
+                  class="contact-icon__box"
+                  target="_blank"
+                  aria-label="Odnośnik do witryny TikTok"
+                >
+                  <svg class="contact-icon" aria-hidden="true">
+                    <use href="./img/icons.svg#icon-tiktok"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -183,16 +237,16 @@
       <p class="footer__logo">PzG</p>
       <ul class="footer__list">
         <li class="footer__list--item">
-          <a href="about" class="footer__list--link about">O nas</a>
+          <a href="#wstęp" class="footer__list--link about">Statystyki</a>
         </li>
         <li class="footer__list--item">
-          <a href="goals" class="footer__list--link goals">Nasz cel</a>
+          <a href="#cel" class="footer__list--link goals">Nasz cel</a>
         </li>
         <li class="footer__list--item">
-          <a href="why" class="footer__list--link why">Dlaczego?</a>
+          <a href="#dlaczego" class="footer__list--link purpose">Dlaczego?</a>
         </li>
         <li class="footer__list--item">
-          <a href="contact" class="footer__list--link contact">Kontakt</a>
+          <a href="#kontakt" class="footer__list--link contact">Kontakt</a>
         </li>
       </ul>
       <p class="footer__copyright-notice">
