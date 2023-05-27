@@ -3,7 +3,7 @@
 
 <!-- Project Description -->
 <p align="center">
-  Pije z Głową is website that was created with simplicity and minimalism. It was designed for my academic social campaign project, it is solely dedicated to provide information about it.
+  Pije z Głową is website that was created with simplicity and minimalism. It was designed for my academic social campaign project, it's solely dedicated to provide information about it. There was a plan to incorporate animated SVGs - unfortunately, due to close deadline, they had to be ommited - nonetheless, their files are included in the source code.
 </p>
 
 <h4 align='center' style='font-weight: 600;'>You can try the live demo of the app <a href='https://pijezglowa.pl'>here</a>.</h4>
