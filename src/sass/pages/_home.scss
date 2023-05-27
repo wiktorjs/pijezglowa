@@ -1,8 +1,9 @@
 // | === COMMON SECTION STYLING ===
 .section {
-  height: calc(100vh - 8rem);
   min-height: 65rem;
   padding: 5rem;
+  display: flex;
+  align-items: center;
 
   @media only screen and (min-height: 860px) {
     max-height: 60vh;
@@ -13,10 +14,14 @@
   @include sectionColorPallete('purpose', $color-purpose, $color-purpose-dark);
   @include sectionColorPallete('contact', $color-contact, $color-contact-dark);
 
+  &-title {
+    padding-top: 2rem;
+  }
+
   & p {
     color: $color-secondary-dark;
     margin-top: 3rem;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 500;
   }
 
